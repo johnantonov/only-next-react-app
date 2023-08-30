@@ -1,0 +1,151 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 26px;
+  background: #F4F4F4;
+}
+.reviews__title {
+  margin-bottom: 16px;
+}
+.reviews__list {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.review {
+  max-width: 387px;
+  padding: 16px 7px 9px 19px;
+  flex: 1;
+  background: var(--lightBackground);
+  border-radius: 10px;
+}
+.review:nth-child(n+4) {
+  display: none;
+}
+.review__header {
+  position: relative;
+  display: flex;
+  color: #9F9F9F;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: normal;
+}
+.review__avatar {
+  margin-right: 16px;
+}
+.review__person {
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+.review__name {
+  color: var(--darkTextColor);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px
+}
+.review__img_name {
+  position: absolute;
+  padding: 10px 8px;
+  color: var(--lightTextColor);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px; 
+}
+.buyIn_ozon {
+  color: var(--blueTextColor);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.buyIn_wb {
+  color: var(--pinkColor);
+  color: var(--blueTextColor);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.review__body {
+  margin-bottom: 18px;
+}
+.review__text {
+  position: relative;
+  width: 330px;
+  margin-bottom: 10px;
+  color: var(--darkTextColor);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.review__text::after {
+  position: absolute;
+  bottom: 5px;
+  right: 40px;
+  content: '';
+  width: 40px;
+  height: 10px;
+  background-image: url('../../../../public/img/reviews/transperent.png');
+  background-position:center left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.review__link {
+  color: var(--linkColor);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration-line: underline;
+
+}
+.review__photos {
+  display: flex;
+  gap: 18px;
+}
+.review__photo_empty {
+  width: 102px;
+  height: 102px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 159, 223, 0.20);
+  background: #FFF;
+}
+.review__ColorButton {
+  margin: auto;
+  text-align: center;
+  width: 269px;
+  padding: 10px ;
+}
+
+@media (max-width: 1180px) {
+  .review:nth-child(n+3) {
+    display: none;
+  }
+}
+@media (max-width:  795px) {
+  .review:nth-child(n+2) {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .review {
+    max-width: 255px;
+    margin: auto;
+  }
+  .review__text {
+    width: 245px;
+  }
+  .review__text::after {
+    right: 90px;
+  }
+  .review__photos {
+    display: none;
+  }
+  .review__buyIn {
+    display: none;
+  }
+}

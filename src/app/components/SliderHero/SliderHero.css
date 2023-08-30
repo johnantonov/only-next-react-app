@@ -1,0 +1,36 @@
+.sliderContainer {
+  position: relative;
+}
+.slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slide {
+
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+.pagination {
+  bottom: 15%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #0099ff;
+}

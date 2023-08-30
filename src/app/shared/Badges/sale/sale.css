@@ -1,0 +1,13 @@
+.saleBadge {
+  width: 50px;
+  padding: 0 5px 1px;
+  text-align: center;
+  border-radius: 10px;
+  background: var(--attentionColor);
+}
+.saleBadge__text {
+  color: var(--lightTextColor);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+}

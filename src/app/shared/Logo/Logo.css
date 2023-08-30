@@ -1,0 +1,29 @@
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo__text {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 500px) {
+  .logo {
+    display: block;
+  }
+  .logo__bag {
+    display: inline;
+  }
+  .logo__text {
+    display: inline;
+    margin-left: -10px;
+  }
+  .logo__bag svg {
+    height: 33px;
+  }
+  .logo__text svg {
+    height: 17px;
+    transform: translateY(-2px); 
+ }
+}
+

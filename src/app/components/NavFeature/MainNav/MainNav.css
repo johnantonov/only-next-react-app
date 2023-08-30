@@ -1,0 +1,87 @@
+.MainNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.MainNav__logo {
+  margin-right: 68px;
+}
+
+.MainNav ul {
+  margin-left: 45px;
+  margin-right: 47px;
+  display: flex;
+  gap: 14px;
+}
+
+.MainNav ul li {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-right: 16px;
+  border-right: 1px solid #DADADA;
+}
+
+.MainNav ul li a {
+  color: var(--grayTextColor)
+}
+
+.MainNav__call {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.MainNav__tel {
+  color: var(--darkTextColor);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+
+@media (max-width: 1270px) {
+  .MainNav ul, .MainNav a {
+    margin: 0;
+  }
+  .MainNav {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1100px) {
+  .MainNav ul {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .MainNav .ColorButtonWrapper {
+    display: none;
+  }
+  .MainNav button:last-child {
+    display: none;
+  }
+  .MainNav__tel {
+    transform: translateY(4px);
+  }
+}
+
+@media (max-width: 370px) {
+  .MainNav .logo__bag svg {
+    margin-left: -10px;
+    height: 30px;
+  }
+  .MainNav .logo__text {
+    margin-left: -24px;
+  }
+  .MainNav .logo__text svg {
+    height: 15px;
+  }
+  .MainNav__tel {
+    font-size: 12px;
+  }
+}

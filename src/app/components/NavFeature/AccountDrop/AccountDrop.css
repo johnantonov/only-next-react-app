@@ -1,0 +1,98 @@
+.account {
+  position: absolute;
+  z-index: 999;
+  left: -92px;
+  top: 46px;
+  width: 290px;
+  background: var(--preDarkTextColor);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+}
+.account__myOrders {
+  display: flex;
+  align-items: center;
+  padding: 5px 21px;
+  color: var(--darkTextColor);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 44px;
+  text-decoration-line: underline;
+  background: var(--lightBackground);
+}
+.account__myOrders svg {
+  margin-right: 10px;
+}
+.account__track {
+  padding: 0 21px 15px;
+}
+.track__title {
+  margin: 12px 0 9px;
+  position: relative;
+  color: var(--moreGrayTextColor);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px; 
+  text-transform: uppercase;
+}
+.track__input {
+  margin-bottom: 15px;
+  width: 256px;
+  height: 40px;
+  padding-left: 16px;
+  border: none;
+  border-radius: 5px;
+}
+.track__title::after {
+  position: absolute;
+  content: '';
+  background-image: url(../../../../../public/img/SecondNav/TrackBox.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 0;
+  top: 38px;
+  width: 24px;
+  height: 24px;
+}
+.track__input::placeholder {
+  color: var(--darkTextColor);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 44px
+}
+.account__btns {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+}
+.account__reg {
+  color: var(--blueTextColor);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 44px; 
+  text-decoration-line: underline;
+}
+.account__validate {
+  color: red;
+  position: absolute;
+  bottom: 55px;
+  left: 35px;
+}
+.account__validate_loading {
+  color: blue;
+}
+
+@media (max-width: 600px) {
+  .account {
+    left: -240px;
+  }
+  .account__btns {
+    gap: 60px;
+  } 
+}
+@media (max-width: 350px) {
+  .account {
+    left: -195px;
+  }
+
+}
