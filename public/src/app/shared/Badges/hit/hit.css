@@ -1,0 +1,10 @@
+.badge_hit {
+  text-align: right;
+  color: var(--lightTextColor);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 0px 5px;
+  height: 13px;
+  border-radius: 10px;
+  background: var(--hitBadgeColor);
+}

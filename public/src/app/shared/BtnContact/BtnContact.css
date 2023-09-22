@@ -1,0 +1,15 @@
+.BtnContact {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 40px;
+  text-decoration-line: underline;
+  background: none;
+}
+header .BtnContact img {
+  margin-right: 9px;
+}
+footer .BtnContact img {
+  margin-right: 17px;
+}

@@ -1,0 +1,186 @@
+[
+  {
+    "productImg": "/img/catalogue/cushionForBack.jpg",
+    "name": "Черная подспинная подушка",
+    "price": "10 900 р.",
+    "discountPrice":8900,
+    "range": "a23414",
+    "sale": "- 18%",
+    "color1info": {
+      "colorPath":  "/img/catalogue/cushionForBack.jpg", 
+      "data": "blackColor", 
+      "aria": "Чёрный"
+    },
+    "color2info": {
+      "colorPath":  "/img/catalogue/cushionForBack.jpg", 
+      "data": "whiteColor", 
+      "aria": "Белый"
+    },
+    "color3info": {
+      "colorPath":  "/img/catalogue/cushionForBack.jpg",
+      "data": "greenColor", 
+      "aria": "Зелёный"
+    }
+  },
+  {
+    "productImg": "/img/catalogue/cushionForNeck.jpg",
+    "name": "Шейный полувалик Detensor (рост от 150 см.) ",
+    "price": "7 100 р.",
+    "discountPrice":4950,
+    "range": "a11111",
+    "sale": "- 30%",
+    "color1info": {
+      "colorPath":  "/img/catalogue/cushionForNeck.jpg", 
+      "data": "blackColor", 
+      "aria": "Чёрный"
+    },
+    "color2info": {
+      "colorPath":  "/img/catalogue/cushionForNeck.jpg", 
+      "data": "greenColor", 
+      "aria": "Белый"
+    },
+    "color3info": {
+      "colorPath":  "/img/catalogue/cushionForNeck.jpg",
+      "data": "greenColor", 
+      "aria": "Зелёный"
+    }
+  },
+  {
+    "productImg": "/img/catalogue/careMat.jpg",
+    "name": "Мат Detensor 18% (от 65 до 120 кг) жесткость 2+",
+    "price": "59 800 р.",
+    "discountPrice":55614,
+    "range": "a43525",
+    "sale": "- 7%",
+    "color1info": {
+      "colorPath":  "/img/catalogue/careMat.jpg", 
+      "data": "blackColor", 
+      "aria": "Чёрный"
+    },
+    "color2info": {
+      "colorPath":  "/img/catalogue/careMat.jpg", 
+      "data": "whiteColor", 
+      "aria": "Белый"
+    },
+    "color3info": {
+      "colorPath":  "/img/catalogue/careMat.jpg",
+      "data": "greenColor", 
+      "aria": "Зелёный"
+    }
+  },
+  {
+    "productImg": "/img/catalogue/mattress.jpg",
+    "name": "Матрас-топпер FIBROTOP Classic (80х200х9 см)",
+    "price": "45 800 р.",
+    "discountPrice":25700,
+    "range": "a22222",
+    "sale": "- 44%",
+    "color1info": {
+      "colorPath":  "/img/catalogue/mattress.jpg", 
+      "data": "blackColor", 
+      "aria": "Чёрный"
+    },
+    "color2info": {
+      "colorPath":  "/img/catalogue/mattress.jpg", 
+      "data": "whiteColor", 
+      "aria": "Белый"
+    },
+    "color3info": {
+      "colorPath":  "/img/catalogue/mattress.jpg",
+      "data": "greenColor", 
+      "aria": "Зелёный"
+    }
+  },
+  {
+    "productImg": "/img/catalogue/cushionForBack.jpg",
+    "name": "Черная подспинная подушка",
+    "price": "10 900 р.",
+    "discountPrice":8900,
+    "range": "a23415",
+    "sale": "- 18%",
+    "color1info": {
+      "colorPath":  "/img/catalogue/cushionForBack.jpg", 
+      "data": "blackColor", 
+      "aria": "Чёрный"
+    },
+    "color2info": {
+      "colorPath":  "/img/catalogue/cushionForBack.jpg", 
+      "data": "whiteColor", 
+      "aria": "Белый"
+    },
+    "color3info": {
+      "colorPath":  "/img/catalogue/cushionForBack.jpg",
+      "data": "greenColor", 
+      "aria": "Зелёный"
+    }
+  },
+  {
+    "productImg": "/img/catalogue/cushionForNeck.jpg",
+    "name": "Шейный полувалик Detensor (рост от 150 см.) ",
+    "price": "7 099 р.",
+    "discountPrice":4150,
+    "range": "a11112",
+    "sale": "- 30%",
+    "color1info": {
+      "colorPath":  "/img/catalogue/cushionForNeck.jpg", 
+      "data": "blackColor", 
+      "aria": "Чёрный"
+    },
+    "color2info": {
+      "colorPath":  "/img/catalogue/cushionForNeck.jpg", 
+      "data": "whiteColor", 
+      "aria": "Белый"
+    },
+    "color3info": {
+      "colorPath":  "/img/catalogue/cushionForNeck.jpg",
+      "data": "greenColor", 
+      "aria": "Зелёный"
+    }
+  },
+  {
+    "productImg": "/img/catalogue/careMat.jpg",
+    "name": "Мат Крутой 18% жесткость 999+",
+    "price": "59 400 р.",
+    "discountPrice":55100,
+    "range": "a43121",
+    "sale": "- 7%",
+    "color1info": {
+      "colorPath":  "/img/catalogue/careMat.jpg", 
+      "data": "blackColor", 
+      "aria": "Чёрный"
+    },
+    "color2info": {
+      "colorPath":  "/img/catalogue/careMat.jpg", 
+      "data": "whiteColor", 
+      "aria": "Белый"
+    },
+    "color3info": {
+      "colorPath":  "/img/catalogue/careMat.jpg",
+      "data": "greenColor", 
+      "aria": "Зелёный"
+    }
+  },
+  {
+    "productImg": "/img/catalogue/mattress.jpg",
+    "name": "Матрас какой-то WOW (80х200х9 см)",
+    "price": "45 400 р.",
+    "discountPrice":25200,
+    "range": "a22224",
+    "sale": "- 44%",
+    "color1info": {
+      "colorPath":  "/img/catalogue/mattress.jpg", 
+      "data": "blackColor", 
+      "aria": "Чёрный"
+    },
+    "color2info": {
+      "colorPath":  "/img/catalogue/mattress.jpg", 
+      "data": "whiteColor", 
+      "aria": "Белый"
+    },
+    "color3info": {
+      "colorPath":  "/img/catalogue/mattress.jpg",
+      "data": "greenColor", 
+      "aria": "Зелёный"
+    }
+  }
+]

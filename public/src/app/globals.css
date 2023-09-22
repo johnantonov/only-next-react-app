@@ -1,0 +1,61 @@
+@import url('https://fonts.cdnfonts.com/css/geometria?styles=17358,17351,17356,17357,17347,17348,17352,17353,17354,17355,17343,17344,17345,17346,17349,17350');
+* {
+  box-sizing: border-box;
+}
+:root {
+  --lightTextColor: #fff;
+  --grayTextColor: #495955;
+  --titleColor: #494949;
+  --moreGrayTextColor: #4D4D4C;
+  --dakrGrayTextColor: #515150;
+  --blueTextColor: #019CDD;
+  --darkTextColor: #000;
+  --preDarkTextColor: #EDEDED;
+  --lightBackground: #fff;
+  --hitBadgeColor: #E56B50;
+  --newBadgeColor: #50AAE5;
+  --unactiveColor: #909090;
+  --attentionColor: #E56B50;
+  --linkColor: #009FDF ;
+  --pinkColor: #bc23ad;
+}
+body {
+  font-family: 'Geometria', sans-serif;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+@media (max-width: 1439px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 0 10px; 
+  }
+}
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+ul, p, h1, h2, h3, h4 {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.section__title {
+  color: var(--titleColor);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: normal;
+}

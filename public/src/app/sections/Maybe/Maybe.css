@@ -1,0 +1,61 @@
+.Maybe {
+  margin-bottom: 35px;
+}
+
+.Maybe__title {
+  margin-bottom: 21px;
+}
+.Maybe__photos {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Maybe__column {
+  gap: 5px;
+  margin-right: 10px;
+  width: 30.5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Maybe__column_2 {
+  width: 37%;
+}
+.Maybe__column_3 {
+  margin-right: 0;
+}
+
+.Maybe__link {
+  width: 100%;
+}
+.Maybe__link_2 {
+  width: 100%;
+}
+
+@media (max-width: 1050px) {
+  .Maybe__photos {
+    justify-content: center;
+  }
+  .Maybe__column {
+    gap: 5px;
+    margin-right: 5px;
+    width:35%;
+  }
+  .Maybe__column_2 {
+    width: 59%;
+  }
+  .Maybe__column_3 {
+    margin-right: 0;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .Maybe__column {
+    width: 100%;
+    margin-right: 0;
+    flex-direction: column;
+  }
+}

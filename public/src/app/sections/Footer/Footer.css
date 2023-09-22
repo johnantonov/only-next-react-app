@@ -1,0 +1,140 @@
+.footer__container {
+  padding-top: 33px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.footer__btn {
+  display: none;
+}
+footer h4 {
+  padding-top: 10px;
+  margin-bottom: 17px;
+}
+footer div .logo__bag {
+  margin-bottom: 15px;
+}
+.footer__schedule {
+  color: #9F9F9F;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+}
+.footer__tel {
+  display: block;
+  margin-bottom: 11px;
+}
+.footer__schedule_name {
+  font-weight: 700;
+}
+.cart__img svg {
+  transform: translateY(2px);
+  margin-right: 5px;
+}
+.footer__cart {
+  color: var(--darkTextColor);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration-line: underline;
+}
+.footer__link {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px; 
+  text-decoration-line: underline;
+}
+.footer__link > a {
+  color: var(--dakrGrayTextColor) ;
+}
+
+@media (max-width: 900px) {
+  footer {
+    flex-wrap: wrap;
+  }
+  footer > div {
+    flex: 30%;
+    margin-bottom: 40px;
+  }
+  footer div:first-child {
+    display: flex;
+    justify-content: start;
+    flex-direction: row-reverse;
+    order: 4;
+  }
+  footer div .logo {
+    align-self: start;
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 650px) {
+  footer > div {
+    flex: 30%
+  }
+  footer div:nth-child(2) {
+    order: 0;
+  } 
+  footer div:first-child {
+    display: block;
+    order: 0;
+  }
+  footer div .logo {
+    display: flex;
+    flex-direction: row;
+  }
+  footer h4 {
+    padding-top: 25px;
+  }
+  .footer__schedule {
+    max-width: 70%; 
+  }
+}
+
+@media (max-width: 500px) {
+  footer {
+    border-top: 2px solid #E5E5E5;
+    flex-direction: column;
+    padding-top: 0 !important;
+  }
+  .footer__container {
+    border-top: none;
+  }
+  .footer__btn svg {
+    margin-left: 10px;
+  }
+  .footer__aboutShop > h4, .footer__buyers > h4 {
+    display: none;
+  }
+  .footer__aboutShop, .footer__buyers {
+    margin-bottom: 0;
+  }
+  .footer__btn {
+    margin-left: -20px;
+    padding: 16px 20px;
+    display: block;
+    width: 110%;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    background: none;
+    border-bottom: 2px solid #E5E5E5;
+  }
+  .footer__btn:first-of-type {
+    border-top: 2px solid #E5E5E5;
+    top: 0px;
+  }
+  footer div:first-child {
+    order: 4;
+  }
+  footer div:nth-child(2) {
+    order: 3;
+  }
+  footer div .logo {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .footer__schedule {
+    max-width: 100%; 
+  }
+}
