@@ -1,6 +1,5 @@
 import { FunctionComponent, useContext } from 'react'
 import './BasketDrop.css'
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import { ColorButton } from '@/app/shared/Button/ColorButton';
 import Image from 'next/image';
 import { CartContext, RemoveFromCart, totalCount, totalPrice } from '@/app/shared/Сart/CartContext';

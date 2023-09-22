@@ -1,6 +1,3 @@
-import Image from "next/image"
-import { Header } from "./sections/Header/Header"
-import heroImg from '../../public/hero/matte2025b 1.jpg'
 import { SliderHero } from "./components/SliderHero/SliderHero"
 import styles from './page.module.css';
 import { Hits } from "./sections/Hits/Hits";

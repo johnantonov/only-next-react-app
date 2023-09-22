@@ -36,9 +36,7 @@ export const MainNav: FunctionComponent<Props> = ({
         width={BtnInfo.width}
         paddingY={BtnInfo.paddingY}
       />
-      <ul>
-        {renderNavList(list)}
-      </ul>
+      <ul>{renderNavList(list) }</ul>
       <div className="MainNav__call">
         <a href="tel:74994446902" className="MainNav__tel">+7 499 444-69-02</a>
         <BtnContact 

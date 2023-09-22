@@ -1,8 +1,5 @@
 import './GetSale.css'
 
-
-
-
 export const GetSale = () => {
   return (
     <div className='GetSale__divider'>

@@ -1,7 +1,7 @@
 import './globals.css'
 import { Footer } from './sections/Footer/Footer'
 import { Header } from './sections/Header/Header'
-import { CartProvider, CartContext } from './shared/Сart/CartContext'
+import { CartProvider } from './shared/Сart/CartContext'
 
 
 export const metadata = {

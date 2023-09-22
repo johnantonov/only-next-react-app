@@ -1,5 +1,5 @@
 'use client'
-import { FunctionComponent, useState, useEffect, useRef, useContext } from "react";
+import { FunctionComponent, useState, useEffect, useContext } from "react";
 import './Hits.css'
 import { ColorButton } from "@/app/shared/Button/ColorButton";
 import Image from "next/image";
@@ -10,8 +10,12 @@ import { formatPrice } from "@/app/helpers/formatPrice";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { useMediaQuery } from "react-responsive";
 import { useSwipeable } from 'react-swipeable';
-import { ImageResponse } from "next/server";
 import { createPortal } from "react-dom";
+import { Text } from "@/app/components/Text/Text";
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// РЕФАКТОРИНГ И РАСКИДАТЬ ПО КОМПОНЕНТАМ
 
 
 interface Hit {
@@ -27,6 +31,9 @@ interface Hit {
 }
 
 export const Hits: FunctionComponent = () => {
+  // контекст корзины
+  const {cartItems, setCartItems} = useContext(CartContext)
+
   // переключайтель секции
   const [sectionState, setSectionState] = useState('hits');
   const setHits = () => {
@@ -49,7 +56,7 @@ export const Hits: FunctionComponent = () => {
         .catch(error => console.error('Ошибка загрузки данных:', error));
     } else if (sectionState === 'sale') {
       fetch('data/catalogue/saleCatalogue.json')
-        .then(res => res.json())
+      .then(res => res.json())
         .then(data => setHitsData(data))
         .catch(error => console.error('Ошибка загрузки данных:', error));
     }
@@ -102,8 +109,6 @@ export const Hits: FunctionComponent = () => {
     setCount(updatedCount);
   }
 
-  // для кнопки заказа в один клик
-  const {cartItems, setCartItems} = useContext(CartContext)
 
   // реализуем слайдер
   const [moveSlides, setMoveSlides] = useState(1)
@@ -161,50 +166,46 @@ export const Hits: FunctionComponent = () => {
 
   return (
     <section className="Hits container">
-      <h2 className="Hits__title section__title">ХИТЫ ПРОДАЖ / РАСПРОДАЖА</h2>
+      <Text As="h2" className="Hits__title section__title">ХИТЫ ПРОДАЖ / РАСПРОДАЖА</Text>
       <div className="Hits__btns">
         <ColorButton handler={setHits} className={sectionState === 'hits' ? 'hits__active' : 'hits__unactive'} text="Самые популярные" width={227} paddingY={10} />
         <ColorButton handler={setSale} className={sectionState === 'sale' ? 'hits__active' : 'hits__unactive'} text="Распродажа" width={175} paddingY={10} />
       </div>
-
       <div className="Hits__wrapper">
-
-
         <div className="Hits__nav">
           <button className="Hits__prev" onClick={() => prevSlide()}></button>
           <button className="Hits__next" onClick={() => nextSlide()}></button>
         </div>
+
         <div className="Hits__slider" {...handlers}>
-        {hitsData.map((item, index) => (
-            <div className="Hits__slide" key={index} style={{ transform: `translateX(-${moveSlides * 100}%)` }}>
-              <SaleBadge text={item.sale} className="Hits__saleBadge" />
-              <Image layout="responsive" src={item.productImg} alt={'фото товара'} width={279} height={220} />
-              <h3 className="hits__name">{item.name}</h3>
-              <p className="hits__price">{formatPrice(item.discountPrice)} р.<span className="hits__discount"> {item.price}</span></p>
-              <div className="hitsSlide__btns">
-                <ColorButton handler={() => handlerBasketBtn(index)} id="hits__btn_basket" className="hits__btn_basket" width={50} img={basketImg} paddingY={7}/>
-                <ColorButton handler={() => {
-                    AddToCart(
-                      {
-                        name: item.name,
-                        range: item.range,
-                        count: 1,
-                        price: item.discountPrice,
-                        color: item.color1info.aria,
-                        productImg: item.productImg
-                      }, 
-                      cartItems,
-                      setCartItems,
-                      handlerModalWindow
-                    );
-                    
-                  }
-                } id="hits__btn_buy" className="hits__btn_buy" width={192} paddingY={10} text="ЗАКАЗ в 1 клик"/>
-              </div>
+
+          {hitsData.map((item, index) => (
+              <div className="Hits__slide" key={index} style={{ transform: `translateX(-${moveSlides * 100}%)` }}>
+                <SaleBadge text={item.sale} className="Hits__saleBadge" />
+                <Image layout="responsive" src={item.productImg} alt={'фото товара'} width={279} height={220} />
+                <h3 className="hits__name">{item.name}</h3>
+                <p className="hits__price">{formatPrice(item.discountPrice)} р.<span className="hits__discount"> {item.price}</span></p>
+                <div className="hitsSlide__btns">
+                  <ColorButton handler={() => handlerBasketBtn(index)} id="hits__btn_basket" className="hits__btn_basket" width={50} img={basketImg} paddingY={7}/>
+                  <ColorButton handler={() => {
+                      AddToCart(
+                        { name: item.name,
+                          range: item.range,
+                          count: 1,
+                          price: item.discountPrice,
+                          color: item.color1info.aria,
+                          productImg: item.productImg }, 
+                        cartItems,
+                        setCartItems,
+                        handlerModalWindow
+                      );
+                    }
+                  } id="hits__btn_buy" className="hits__btn_buy" width={192} paddingY={10} text="ЗАКАЗ в 1 клик"/>
+                </div>
 
               <div id={`${index}_basketWindow`} className={`Hits__windowAdd ${windowAdd[index] ? 'windowAdd_active' : ''}`} >
                 <div className="windowAdd__header">
-                  <h3>Выберите параметры товара</h3>
+                  <Text As="h3">Выберите параметры товара</Text>
                   <button onClick={() => handlerBasketBtn(index)} className="windowAdd__close"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M6.61612 6.61612C7.10427 6.12796 7.89573 6.12796 8.38388 6.61612L15 13.2322L21.6161 6.61612C22.1043 6.12796 22.8957 6.12796 23.3839 6.61612C23.872 7.10427 23.872 7.89573 23.3839 8.38388L16.7678 15L23.3839 21.6161C23.872 22.1043 23.872 22.8957 23.3839 23.3839C22.8957 23.872 22.1043 23.872 21.6161 23.3839L15 16.7678L8.38388 23.3839C7.89573 23.872 7.10427 23.872 6.61612 23.3839C6.12796 22.8957 6.12796 22.1043 6.61612 21.6161L13.2322 15L6.61612 8.38388C6.12796 7.89573 6.12796 7.10427 6.61612 6.61612Z" fill="#4D4D4C"/></svg></button>
                 </div>
                 <div className="windowAdd__info">

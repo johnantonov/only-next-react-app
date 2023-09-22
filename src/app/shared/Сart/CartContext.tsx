@@ -3,8 +3,6 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { createContext, useContext, useEffect, useState } from "react"
 import { ColorButton } from "../Button/ColorButton";
 import basketImg from '../../../../public/img/buttons/basketImg.svg'
-import { log } from "console";
-
 
 interface CartContextType {
   cartItems: Product[];

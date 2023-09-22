@@ -1,4 +1,4 @@
-import { FunctionComponent, MouseEventHandler, TouchEventHandler } from "react";
+import { FunctionComponent } from "react";
 import './ColorButton.css'
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
